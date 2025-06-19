@@ -303,9 +303,9 @@ If you use this project in your research or publication, please cite it as follo
 ```bibtex
 @misc{banknatchapol2024paperconverter,
   title        = {3D to 2D Paper Model Converter},
-  author       = {Bank Natchapol},
-  year         = {2024},
-  howpublished = {\url{https://github.com/yourusername/Export-Paper-Model-from-Blender}},
+  author       = {Natchapol Patamawisut},
+  year         = {2025},
+  howpublished = {\url{https://github.com/BankNatchapol/3D-to-2D-Paper-Model-Converter}},
   note         = {Python toolkit for converting 3D models from Blender into unfolded paper models and visualizations.}
 }
 ```
