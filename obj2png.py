@@ -65,16 +65,16 @@ class OBJRenderer:
             '8K': (7680, 4320)
         }
         self.resolution = self.resolution_presets.get(resolution.upper(), (1920, 1080))
-        
+    
     def setup_scene(self):
         """Configure Blender scene for rendering."""
         try:
             logger.info("Setting up Blender scene...")
             
             # Clear existing objects
-bpy.ops.object.select_all(action='SELECT')
-bpy.ops.object.delete(use_global=False)
-
+            bpy.ops.object.select_all(action='SELECT')
+            bpy.ops.object.delete(use_global=False)
+            
             # Configure render settings
             scene = bpy.context.scene
             scene.render.engine = self.render_engine
@@ -104,7 +104,7 @@ bpy.ops.object.delete(use_global=False)
         logger.info(f"Importing OBJ file: {obj_path}")
         
         try:
-bpy.ops.wm.obj_import(
+            bpy.ops.wm.obj_import(
                 filepath=obj_path,
                 filter_glob="*.obj;*.mtl"
             )
@@ -135,10 +135,10 @@ bpy.ops.wm.obj_import(
             scene = bpy.context.scene
             
             # Create camera
-cam_data = bpy.data.cameras.new("Camera")
+            cam_data = bpy.data.cameras.new("Camera")
             cam_obj = bpy.data.objects.new("Camera", cam_data)
-scene.collection.objects.link(cam_obj)
-scene.camera = cam_obj
+            scene.collection.objects.link(cam_obj)
+            scene.camera = cam_obj
             
             # If no target object specified, use the first mesh object
             if target_object is None:
@@ -223,11 +223,11 @@ scene.camera = cam_obj
             scene = bpy.context.scene
             
             # Create area light
-light_data = bpy.data.lights.new(name="AreaLight", type='AREA')
+            light_data = bpy.data.lights.new(name="AreaLight", type='AREA')
             light_data.energy = energy
-light_obj = bpy.data.objects.new(name="AreaLight", object_data=light_data)
-scene.collection.objects.link(light_obj)
-light_obj.location = (4.0, -4.0, 6.0)
+            light_obj = bpy.data.objects.new(name="AreaLight", object_data=light_data)
+            scene.collection.objects.link(light_obj)
+            light_obj.location = (4.0, -4.0, 6.0)
 
             # Add fill light
             fill_light_data = bpy.data.lights.new(name="FillLight", type='AREA')
