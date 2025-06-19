@@ -72,9 +72,9 @@ class OBJRenderer:
             logger.info("Setting up Blender scene...")
             
             # Clear existing objects
-            bpy.ops.object.select_all(action='SELECT')
-            bpy.ops.object.delete(use_global=False)
-            
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.object.delete(use_global=False)
+
             # Configure render settings
             scene = bpy.context.scene
             scene.render.engine = self.render_engine
@@ -104,7 +104,7 @@ class OBJRenderer:
         logger.info(f"Importing OBJ file: {obj_path}")
         
         try:
-            bpy.ops.wm.obj_import(
+bpy.ops.wm.obj_import(
                 filepath=obj_path,
                 filter_glob="*.obj;*.mtl"
             )
@@ -135,10 +135,10 @@ class OBJRenderer:
             scene = bpy.context.scene
             
             # Create camera
-            cam_data = bpy.data.cameras.new("Camera")
+cam_data = bpy.data.cameras.new("Camera")
             cam_obj = bpy.data.objects.new("Camera", cam_data)
-            scene.collection.objects.link(cam_obj)
-            scene.camera = cam_obj
+scene.collection.objects.link(cam_obj)
+scene.camera = cam_obj
             
             # If no target object specified, use the first mesh object
             if target_object is None:
@@ -223,12 +223,12 @@ class OBJRenderer:
             scene = bpy.context.scene
             
             # Create area light
-            light_data = bpy.data.lights.new(name="AreaLight", type='AREA')
+light_data = bpy.data.lights.new(name="AreaLight", type='AREA')
             light_data.energy = energy
-            light_obj = bpy.data.objects.new(name="AreaLight", object_data=light_data)
-            scene.collection.objects.link(light_obj)
-            light_obj.location = (4.0, -4.0, 6.0)
-            
+light_obj = bpy.data.objects.new(name="AreaLight", object_data=light_data)
+scene.collection.objects.link(light_obj)
+light_obj.location = (4.0, -4.0, 6.0)
+
             # Add fill light
             fill_light_data = bpy.data.lights.new(name="FillLight", type='AREA')
             fill_light_data.energy = energy * 0.3

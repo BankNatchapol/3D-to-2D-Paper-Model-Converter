@@ -19,29 +19,23 @@ A Python tool to convert 3D models from Blender into unfolded paper models for p
 
 ### Prerequisites
 
-- **Python 3.11+** (required for Blender 4.4 compatibility)
-- **Windows 10/11** (tested on Windows 10.0.22631)
+- **Python 3.11+** 
+- **Windows 10/11**
 
 ### Setup
 
-1. **Clone or download this repository**
-   ```bash
-   git clone <repository-url>
-   cd Export-Paper-Model-from-Blender
-   ```
-
-2. **Create a virtual environment**
+1. **Create a virtual environment**
    ```bash
    python -m venv venv
    ```
 
-3. **Activate the virtual environment**
+2. **Activate the virtual environment**
    ```bash
    # Windows
    venv\Scripts\activate.bat
    ```
 
-4. **Install dependencies**
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
@@ -301,3 +295,17 @@ This project is open source. See the repository for license details.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit issues and pull requests.
+
+## 📖 Citation
+
+If you use this project in your research or publication, please cite it as follows:
+
+```bibtex
+@misc{banknatchapol2024paperconverter,
+  title        = {3D to 2D Paper Model Converter},
+  author       = {Bank Natchapol},
+  year         = {2024},
+  howpublished = {\url{https://github.com/yourusername/Export-Paper-Model-from-Blender}},
+  note         = {Python toolkit for converting 3D models from Blender into unfolded paper models and visualizations.}
+}
+```
