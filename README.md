@@ -2,7 +2,7 @@
 
 A Python tool to convert 3D models from Blender into unfolded paper models for printing and assembly.
 
-<p float="left">
+<p align="center">
   <img src="plots/Cube_1_comparison.png" width="300" alt="Cube 1 Comparison"/>
   <img src="plots/WeirdShape_comparison.png" width="300" alt="WeirdShape Comparison"/>
 </p>
