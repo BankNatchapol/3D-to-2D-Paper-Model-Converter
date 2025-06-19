@@ -19,7 +19,7 @@ A Python tool to convert 3D models from Blender into unfolded paper models for p
 
 ### Prerequisites
 
-- **Python 3.11+** 
+- **Python 3.11** 
 - **Windows 10/11**
 
 ### Setup
